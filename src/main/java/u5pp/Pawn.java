@@ -42,12 +42,14 @@ public class Pawn extends ChessPiece{
 }
 
 public String toString() {
-    if (isWhite == true){
-        return "P";
+    if (isWhite == false){
+        return "p";
     }
     else {
-        return "p";
+        return "P";
     }
 }
 
 }
+
+
