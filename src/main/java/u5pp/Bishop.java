@@ -18,8 +18,8 @@ public class Bishop extends ChessPiece {
             return false;
         }
 
-        // Check if there are pieces in between for white bishop
-        if (getIsWhite() == true) {
+        // Check if there are pieces in between for bishop
+        if (getIsWhite() == true || getIsWhite() == false) {
             int rowInc = (row - this.row) / rowDiff;
             int colInc = (col - this.col) / colDiff;
             int currRow = this.row + rowInc;
@@ -39,33 +39,15 @@ public class Bishop extends ChessPiece {
             return false;
         }
 
-        // Check if there are pieces in between for black bishop
-        else {
-            int rowInc = (row - this.row) / rowDiff;
-            int colInc = (col - this.col) / colDiff;
-            int currRow = this.row + rowInc;
-            int currCol = this.col + colInc;
-
-            while (currRow != row && currCol != col) {
-                if (board[currRow][currCol] != null) {
-                    return false;
-                }
-                currRow += rowInc;
-                currCol += colInc;
-            }
-
-            if (board[row][col] == null || board[row][col].isWhite != this.isWhite) {
-                return true;
-            }
-            return false;
+        return false;
         }
-    }
+
 
     public String toString() {
-        if (isWhite) {
-            return "B";
-        } else {
+        if (isWhite == false){
             return "b";
+        } else {
+            return "B";
         }
     }
 }
