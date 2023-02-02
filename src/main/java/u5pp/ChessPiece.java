@@ -2,7 +2,7 @@ package u5pp;
 
 public class ChessPiece {
 
-    ChessPiece[][] board; 
+   ChessPiece[][] board; 
     int row;
     int col;
     boolean isWhite;
@@ -44,3 +44,5 @@ public class ChessPiece {
         return "Row:" + row + "column: " + col;
     }
 }
+
+
