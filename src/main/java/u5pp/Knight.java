@@ -11,6 +11,7 @@ public class Knight extends ChessPiece {
         }
         int rowDiff = Math.abs(this.row - row);
         int colDiff = Math.abs(this.col - col);
+        //Checks if it is moving in a L shape. 
         if ((rowDiff == 2 && colDiff == 1) || (rowDiff == 1 && colDiff == 2)) {
             if (board[row][col] == null || board[row][col].isWhite != this.isWhite) {
                 return true;
