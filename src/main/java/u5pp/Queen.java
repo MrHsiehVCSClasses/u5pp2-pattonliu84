@@ -38,7 +38,7 @@ public class Queen extends ChessPiece {
             int currCol = this.col + colInc;
 
 
-            while (currRow != row && currCol != col) {
+            while (currRow != row || currCol != col) {
                 if (board[currRow][currCol] != null) {
                     return false;
                 }
@@ -64,4 +64,6 @@ public class Queen extends ChessPiece {
         }
     }
 }
+
+
 
